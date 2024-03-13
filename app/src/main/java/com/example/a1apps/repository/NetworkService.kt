@@ -8,7 +8,7 @@ import java.io.IOException
 
 object NetworkService {
 
-    private const val API_KEY = "ef510a5948msh32a712eafa01f0ep1ce222jsn585759274c13"
+    private const val API_KEY = "b81b0e2d18msh451d7dcfaccb923p1b3eddjsn411f03c95b6b"
     private const val HOST = "mangaverse-api.p.rapidapi.com"
 
     private val client = OkHttpClient()
