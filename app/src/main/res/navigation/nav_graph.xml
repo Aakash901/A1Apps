@@ -14,6 +14,7 @@
             android:id="@+id/action_splashFragment_to_homeFragment"
             app:destination="@id/homeFragment"
             app:popUpTo="@id/splashFragment"
+            app:enterAnim="@anim/from_right"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -26,6 +27,7 @@
             app:destination="@id/favouriteFragment" />
         <action
             android:id="@+id/action_homeFragment_to_detailFragment"
+            app:enterAnim="@anim/from_right"
             app:destination="@id/detailFragment" />
     </fragment>
     <fragment
@@ -38,6 +40,10 @@
             app:destination="@id/homeFragment"
             app:popUpTo="@id/favouriteFragment"
             app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_favouriteFragment_to_detailFragment"
+            app:enterAnim="@anim/from_right"
+            app:destination="@id/detailFragment" />
     </fragment>
 
     <fragment
@@ -48,6 +54,7 @@
 
         <action
             android:id="@+id/action_detailFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/from_left"/>
     </fragment>
 </navigation>

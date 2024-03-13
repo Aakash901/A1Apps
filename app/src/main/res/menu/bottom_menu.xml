@@ -5,6 +5,6 @@
         android:icon="@drawable/ic_home"
         android:title="Films"/>
     <item android:id="@+id/favouriteFragment"
-        android:icon="@drawable/ic_favourite"
+        android:icon="@drawable/star"
         android:title="Favourites"/>
 </menu>

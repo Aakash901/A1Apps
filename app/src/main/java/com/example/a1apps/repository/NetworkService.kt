@@ -7,7 +7,8 @@ import okhttp3.Request
 import java.io.IOException
 
 object NetworkService {
-    private const val API_KEY = "15d34cdd87mshbe794ec536d6f00p18fa9ejsn0e02a1534487"
+
+    private const val API_KEY = "ef510a5948msh32a712eafa01f0ep1ce222jsn585759274c13"
     private const val HOST = "mangaverse-api.p.rapidapi.com"
 
     private val client = OkHttpClient()

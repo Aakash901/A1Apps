@@ -3,9 +3,17 @@
     <color name="black">#FF000000</color>
     <color name="black2">#252424</color>
     <color name="black3">#3A3636</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="back">#E17F7F</color>
+    <color name="back">#d7d7d7</color>
     <color name="main">#CFAC73</color>
     <color name="theme">#7783DC</color>
     <color name="theme2">#E89A59</color>
+    <color name="background">#454545</color>
+    <color name="background2">#999999</color>
+
+    <color name="white">#efefef</color>
+    <color name="white2">#d7d7d7</color>
+    <color name="white3">#bfbfbf</color>
+    <color name="white4">#a7a7a7</color>
+    <color name="white5">#8f8f8f</color>
+    <color name="main_white">#FFFFFFFF</color>
 </resources>

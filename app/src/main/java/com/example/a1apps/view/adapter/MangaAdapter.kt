@@ -1,5 +1,6 @@
-package com.example.a1apps.view
+package com.example.a1apps.view.adapter
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,10 +12,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.a1apps.R
 import com.example.a1apps.repository.model.MangaData
+import com.example.a1apps.repository.favouriteDB.FavoriteManga
+import com.example.a1apps.viewmodel.HomeViewModel
 
 class MangaAdapter(
     private var mangaList: List<MangaData>,
-    private val navController: NavController
+    private val navController: NavController,
+    private val myViewModel: HomeViewModel,
+    private val context: Context
 ) :
     RecyclerView.Adapter<MangaAdapter.MangaViewHolder>() {
 
@@ -30,8 +35,24 @@ class MangaAdapter(
         Glide.with(holder.itemView.context)
             .load(manga.thumb)
             .centerCrop()
-            .placeholder(R.drawable.ic_launcher_background)
+            .placeholder(R.drawable.manga)
             .into(holder.authorImageView)
+
+        holder.iconImageView.setOnClickListener {
+            myViewModel.insertFavoriteManga(
+                FavoriteManga(
+                    manga.id,
+                    manga.title,
+                    manga.thumb,
+                    manga.summary,
+                    manga.authors,
+                    manga.status,
+                    manga.genres
+                ),context
+            )
+            holder.iconImageView.visibility=View.GONE
+
+        }
 
         holder.itemView.setOnClickListener {
             val bundle = Bundle().apply {
@@ -58,5 +79,6 @@ class MangaAdapter(
     inner class MangaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         val authorImageView: ImageView = itemView.findViewById(R.id.imageVie)
+        val iconImageView: ImageView = itemView.findViewById(R.id.iconImageView)
     }
 }

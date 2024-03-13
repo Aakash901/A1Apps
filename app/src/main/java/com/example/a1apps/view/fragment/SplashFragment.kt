@@ -26,14 +26,14 @@ class SplashFragment : Fragment() {
         setStatusBarColor()
         Handler(Looper.getMainLooper()).postDelayed({
             findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
-        }, 2000)
+        }, 3000)
 
         return binding.root
     }
 
     private fun setStatusBarColor() {
         activity?.window?.apply {
-            val statusBarColors = ContextCompat.getColor(requireContext(), R.color.black2)
+            val statusBarColors = ContextCompat.getColor(requireContext(), R.color.white4)
             statusBarColor = statusBarColors
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR

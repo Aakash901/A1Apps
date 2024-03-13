@@ -54,7 +54,7 @@ class DetailFragment : Fragment() {
         Glide.with(requireContext())
             .load(thumb)
             .centerCrop()
-            .placeholder(R.drawable.ic_launcher_background)
+            .placeholder(R.drawable.manga)
             .into(binding.movieLogo)
 
 
@@ -64,7 +64,7 @@ class DetailFragment : Fragment() {
 
     private fun setStatusBarColor() {
         activity?.window?.apply {
-            val statusBarColors = ContextCompat.getColor(requireContext(), R.color.theme2)
+            val statusBarColors = ContextCompat.getColor(requireContext(), R.color.white2)
             statusBarColor = statusBarColors
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
